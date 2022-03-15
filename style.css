@@ -7,6 +7,18 @@
     font-family: 'Rubik', sans-serif;
 }
 
+h1{
+    font-size: 4em;
+}
+
+h2{
+    font-size: 2.5em;
+}
+
+h3{
+    font-size: 2em;
+}
+
 #canvas1{
     position: fixed;
     width: 100%;
@@ -129,6 +141,19 @@ nav ul li.btn{
 /* Fin Navbar */
 
 section{
-    height: 1500px;
     color: #fff;
 }
+
+/* Comienzo Hero */
+.hero-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+    margin: 0 10em;
+}
+
+/* Fin Hero */
+
+
