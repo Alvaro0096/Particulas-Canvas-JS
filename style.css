@@ -8,47 +8,116 @@
 }
 
 #canvas1{
-    position: absolute;
+    position: fixed;
+    width: 100%;
+    height: 100%;
     z-index: -1000;
     top: 0;
     left: 0;
     background: radial-gradient(#5829cf , #0B011F);
 }
 
-header{
-    width: 100vw;
-    display: flex;
-    justify-content: flex-end;
-}
-
+/* Comienzo Navbar */
 nav{
-    width: 50%;
-    margin-top: 1.5rem;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, .5);
-    border-top-left-radius: .5rem;
-    border-bottom-left-radius: .5rem;
+    background-color: rgba(20, 20, 20, 1);
+    padding: .5em 2.5em;
 }
 
-.nav-ul{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.nav-list{
+nav ul{
     list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.nav-a{
-    font-size: 1.2rem;
-    padding: .3rem;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-bottom: 2px solid rgba(255, 255, 255, 0);
+nav ul li{
+    padding: .7em 0;
+}
+
+nav ul li.item{
+    width: auto;
+    position: relative;
+    margin: 0 1em;
+    text-align: center;
+    order: 3;
+}
+
+nav ul li.item::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    height: .2em;
+    bottom: .2em;
+    width: 100%;
+    background-color: #430bb3;
+    opacity: 0;
     transition: 500ms;
 }
 
-a:hover{
-    border-bottom: 2px solid rgba(255, 255, 255, 1);
+nav ul li.item:hover::after{
+    opacity: 1;
+    bottom: .5em;
+}
+
+nav ul li.logo{
+    flex: 1;
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 500;
+    cursor: default;
+    user-select: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fff;
+    transition: 500ms;
+}
+
+nav ul li a:hover{
+    color: #430bb3;
+}
+
+nav ul li.btn{
+    display: none;
+    font-size: 1.5em;
+}
+
+nav ul li.btn.hide i:before{
+    content: '\f00d';
+}
+
+@media all and (max-width: 560px){
+
+nav{
+    padding: .3em 2em;
+}
+
+nav ul li.item{
+    display: none;
+    width: 100%;
+    transition: 500ms;
+    border-radius: .5em;
+    margin-bottom: .5em;
+}
+
+nav ul li.item.show{
+    display: block;
+}
+
+nav ul li.item:hover{
+    box-shadow: inset 0 0 0.3em #340bb0,
+                inset 0 0 0.6em #451bb9;
+}
+
+nav ul li.item:hover::after{
+    opacity: 0;
+}
+
+nav ul li.btn{
+    display: block;
+}
+
 }

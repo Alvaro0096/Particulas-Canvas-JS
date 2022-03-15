@@ -135,3 +135,14 @@ window.addEventListener('mouseout', () => {
 
 init();
 animate();
+//End of canvas
+//------------------------------
+
+//Navbar
+
+$(document).ready(function(){
+    $('.btn').click(function(){
+        $('.item').toggleClass('show');
+        $('ul li').toggleClass('hide');
+    })
+});
