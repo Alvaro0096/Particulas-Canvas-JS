@@ -18,6 +18,12 @@
 }
 
 /* Comienzo Navbar */
+header{
+    top: 0;
+    position: sticky;
+    transition: top .3s;
+}
+
 nav{
     background-color: rgba(20, 20, 20, 1);
     padding: .5em 2.5em;
@@ -119,5 +125,11 @@ nav ul li.item:hover::after{
 nav ul li.btn{
     display: block;
 }
+}
 
+/* Fin Navbar */
+
+section{
+    height: 1500px;
+    color: #fff;
 }
