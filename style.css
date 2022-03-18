@@ -1,17 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
 }
 
 #canvas1{
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1000;
     top: 0;
     left: 0;
     background: radial-gradient(#350c9c , #09011a);
