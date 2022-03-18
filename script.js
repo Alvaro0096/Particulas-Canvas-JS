@@ -136,25 +136,3 @@ window.addEventListener('mouseout', () => {
 init();
 animate();
 //End of canvas
-//------------------------------
-
-//Navbar
-$(document).ready(function(){
-    $('.btn').click(function(){
-        $('.item').toggleClass('show');
-        $('ul li').toggleClass('hide');
-    })
-});
-
-//Navbar Scroll Hide
-let prevScrollpos = window.pageYOffset;
-window.onscroll = () => {
-    let navbar_scroll = document.getElementById('navbar');
-    let currentScrollPos = window.pageYOffset;
-    if(prevScrollpos > currentScrollPos){
-        navbar_scroll.style.top = '0';
-    } else {
-        navbar_scroll.style.top = '-400px';
-    }
-    prevScrollpos = currentScrollPos;
-}
